@@ -1,0 +1,152 @@
+.container{
+    max-width: 720px;
+    margin: 20px auto;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+}
+.container h1{
+    color: var(--white);
+}
+.form{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    margin: 16px 0;
+}
+.row{
+    display: flex;
+    background-color: var(--dark-900);
+    align-items: center;
+    border: 0;
+    font-size: 18px;
+    border-radius: 8px;
+    color: var(--white);
+    transition: filter 0.5s;
+}
+
+.containerBtnNav{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    gap: 10px;
+}
+.btnNav{
+    display: flex;
+    background-color: var(--dark-900);
+    align-items: center;
+    border: 1px solid var(--green-900);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.btnNav:hover{
+    background-color: var(--green-900);
+    color: black;
+}
+.customerItem{
+    display: flex;
+    width: 100%;
+    background-color: var(--dark-900);
+    align-items: center;
+    border: 0;
+    font-size: 18px;
+    border-radius: 8px;
+    color: var(--white);
+    transition: filter 0.5s;
+}
+.customerItem:hover{
+    filter: brightness(2.0);
+}
+.spanOrder{
+    padding: 8px;
+    border-left: 8px;
+}
+.listCustomers{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.tag{
+    width: 9px;
+    height: 60px;
+    background-color: var(--green-900);
+    border-radius: 6px 0 0 6px;
+    margin-right: 16px;
+}
+.inputrow{
+    width: 70%;
+    height: 40px;
+    border: 0;
+    background-color: var(--dark-900);
+    border-radius: 8px;
+    padding: 0 16px;
+    color: var(--white);
+    border: 1px solid var(--gray-100);
+}
+.label{
+    color: var(--white);
+    font-size: 1.5em;
+}
+.input{
+    height: 40px;
+    border: 0;
+    background-color: var(--dark-900);
+    border-radius: 8px;
+    padding: 0 16px;
+    color: var(--white);
+    border: 1px solid var(--gray-100);
+}
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button{
+    gap: 8px;
+    height: 40px;
+    width: 200px;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--green-900);
+    font-weight: bold;
+    font-size: 19px;
+    color: var(--white);
+    transition: all 0.5s;
+}
+.button:hover{
+    transform: scale(1.05);
+    color: var(--dark-500);
+}
+.flashMessage {
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--green-500); /* Verde para sucesso */
+    border: 1px solid var(--green-700);
+    border-radius: 5px;
+    animation: fadeOut 6s forwards; /* Animação para desaparecer */
+}
+
+/* Estilo alternativo para mensagens de erro */
+.flashMessage.error {
+    background-color: var(--red-500);
+    border-color: var(--red-700);
+}
+
+/* Animação para desaparecer */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

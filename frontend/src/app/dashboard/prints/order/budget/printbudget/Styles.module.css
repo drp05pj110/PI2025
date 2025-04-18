@@ -1,0 +1,200 @@
+.container {
+    width: 210mm; /* Mantém a largura exata do A4 */
+    min-height: 297mm; /* Define uma altura mínima ao invés de fixa */
+    margin: 0 auto;
+    padding: 10mm; /* Margem interna */
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+}
+
+.container, .container * {
+    page-break-inside: avoid;
+}
+
+/* Estilos para o botão de impressão */
+.printButton {
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #0070f3;
+    margin-left: 3px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.printButton:hover {
+    background-color: #005bb5;
+}
+
+.marginContainer {
+    margin: 0;
+}
+
+.containerCustomerButtons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerContainer h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.containerCustomerButtons h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.headerContainer h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.containerHeaderDetails {
+    text-align: center;
+    margin-right: 100px;
+    margin-bottom: 30px;
+}
+
+.containerBodyDetails {
+    text-align: left;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    padding: 8px;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Defina um tamanho fixo ou ajustável */
+    height: 120px;
+    max-width: 100%;
+    max-height: 90px;
+    overflow: hidden;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
+.containerCustomerButtons h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.containerCustomerButtons h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.containerCustomerButtons h3 {
+    font-size: 9px;
+    margin: 0;
+}
+
+.containerCustomerDetails {
+    margin-bottom: 20px;
+}
+
+.containerCustomerDetails label {
+    display: block;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.containerProductDetails {
+    padding: 10px;
+}
+
+.containerProductDetails table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.containerProductDetails table th,
+.containerProductDetails table td {
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.containerCategoryDetails {
+    padding: 10px;
+}
+
+.containerCategoryDetails table {
+    width: 20%;
+    border-collapse: collapse;
+}
+
+.containerCategoryDetails table th,
+.containerCategoryDetails table td {
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.footerContainer {
+    text-align: center;
+    margin-top: 90px;
+    align-items: center;
+}
+
+.row {
+    font-size: 12px;
+    padding: 2px;
+}
+
+/* Ajustes para impressão */
+@media print {
+    /* Oculta elementos desnecessários na impressão */
+    .printButton, .no-print {
+        display: none !important;
+    }
+
+    /* Ajusta a página para impressão correta */
+
+    .container {
+        width: 210mm; /* Mantém a largura exata do A4 */
+        height: 297mm; /* Mantém altura mínima */
+    
+    }
+
+    /* Evita quebras de página dentro de elementos importantes */
+    .container h1,
+    .container h2,
+    .container h3,
+    .container p,
+    .container table {
+    page-break-inside: avoid;
+}
+
+    .container table {
+        width: 100%; /* Garante que a tabela ocupe toda a largura da página */
+    }
+
+    .buttonContainer table th,
+    .buttonContainer table td,
+    .row {
+        font-size: 12px;
+    }
+}

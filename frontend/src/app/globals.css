@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+:root{
+
+  --white: #fff;
+  --black: #000;
+
+  --dark-900: #101026;
+  --dark-700: #1d1d2e;
+
+  --gray-100: #8a8a8a;
+  --green-900: #3fffa3;
+  --red-900: #ff3f4b;
+  
+}
+button{
+ cursor: pointer;
+}
+
+a {
+  color: indianred;
+  text-decoration: none;
+}
+body{
+  background: var(--dark-700);
+}
+
+body, input, textarea, select, button{
+  font: 400, 1em sans-serif; 
+}
+
+@media (max-width: 720px){
+  html{
+    font-size: 87.5%;
+  }
+}
+
+@media (max-width: 180px){
+  html{
+    font-size: 93.75%;
+  }
+}
+/* styles/calendar.css */
+.fc-toolbar-title {
+  color: white !important;
+  font-size: 24px !important;
+}
+
+.fc-daygrid-day-number {
+  color: white !important;
+  font-size: 16px !important;
+}
+
+.fc-button {
+  color: white !important;
+  background-color: #3b3b3b !important;
+  border-color: #444 !important;
+  font-size: 14px !important;
+}
+
+.fc-button:hover {
+  background-color: #555 !important;
+}
+
+/* Ajuste o tamanho do calendário */
+.full-calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; /* Ocupa 90% da altura da tela */
+  width: 90vw;  /* Ocupa 90% da largura da tela */
+  max-width: 1200px; /* Limita a largura máxima do calendário */
+  margin: 0 auto; /* Centraliza na tela */
+}
+
+.fc {
+  width: 100% !important; /* Garante que o calendário ocupe toda a largura do contêiner */
+  height: 100% !important; /* Garante que o calendário ocupe toda a altura do contêiner */
+}

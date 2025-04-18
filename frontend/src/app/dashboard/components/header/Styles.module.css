@@ -1,0 +1,102 @@
+.headerContainer {
+    height: 5rem;
+}
+
+.headerContent {
+    max-width: 1280px;
+    height: 5rem;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Botão de menu hambúrguer */
+.menuToggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menuToggle span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menuToggle .barOpen:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menuToggle .barOpen:nth-child(2) {
+    opacity: 0;
+}
+
+.menuToggle .barOpen:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menu padrão */
+.navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.navMenu a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.8s;
+    padding: 8px;
+    border-radius: 9px;
+}
+
+.navMenu a:hover {
+    background-color: var(--red-900);
+}
+
+.navMenu button {
+    border: 0;
+    background: transparent;
+    margin-left: 16px;
+    transition: 0.5s;
+}
+
+.navMenu button:hover {
+    transform: scale(1.5);
+}
+
+/* Menu responsivo */
+@media (max-width: 768px) {
+    .navMenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background-color: var(--red-900);
+        width: 100%;
+        padding: 1rem 0;
+        gap: 10px;
+        z-index: 5;
+    }
+
+    .menuOpen {
+        display: flex;
+    }
+
+    .menuToggle {
+        display: flex;
+    }
+}

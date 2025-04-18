@@ -1,0 +1,142 @@
+.container {
+    width: 210mm; /* Largura exata da folha A4 */
+    height: 297mm; /* Altura exata da folha A4 */
+    margin: 0 auto;
+    padding: 10mm; /* Margem interna para evitar cortes */
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+}
+
+/* Estilos para o botão de impressão */
+.printButton {
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    margin-left: 3px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.printButton:hover {
+    background-color: #005bb5;
+}
+
+.marginContainer {
+    margin: 0;
+    border: 2px solid red; 
+}
+
+.containerCustomerButtons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.headerContainer h1{
+    font-size: 24px;
+}
+
+.headerContainer h2{
+    font-size: 16px;
+}
+
+.buttonContainer table {
+    border: 1px solid red;
+}
+
+.containerHeaderDetails {
+    text-align: center;
+    margin: auto;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+    width: 120px;
+}
+
+.containerCustomerButtons h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.containerCustomerButtons h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.containerCustomerDetails {
+    margin-bottom: 20px;
+}
+
+.containerCustomerDetails label {
+    display: block;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.buttonContainer {
+    margin-bottom: 20px;
+}
+
+.buttonContainer table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.buttonContainer table th,
+.buttonContainer table td {
+    border: 1px solid red;
+    padding: 8px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.buttonContainer table th {
+    background-color: #f2f2f2;
+}
+
+.row {
+    font-size: 12px;
+    padding: 2px;
+}
+
+/* Estilos específicos para impressão */
+@media print {
+    /* Oculta elementos desnecessários na impressão */
+    .printButton, .no-print {
+        display: none !important;
+    }
+
+    /* Garante que apenas o conteúdo desejado seja impresso */
+    .container {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 10mm;
+        page-break-after: avoid; /* Evita quebra de página no meio do conteúdo */
+    }
+
+    .buttonContainer table th,
+    .buttonContainer table td,
+    .row {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,159 @@
+.container{
+    max-width: 720px;
+    margin: 20px auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+.container h1{
+    color: var(--white);
+    margin-bottom: 16px;
+}
+.container h2{
+    color: var(--white);
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+.containerCustomerButtons{
+    display: flex;
+    margin: 0;
+    gap: 20px;
+}
+
+.ContainerInformations{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+}
+
+.form{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    margin: 16px 0;
+}
+.tdAddress{
+    padding-right: 16px;
+}
+.row{
+    display: flex;
+    background-color: var(--dark-900);
+    align-items: center;
+    border: 0;
+    font-size: 18px;
+    border-radius: 8px;
+    color: var(--white);
+    transition: filter 0.5s;
+}
+.containerCustomerDetails{
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-900);
+    border: 1px solid var(--red-500);
+    border-radius: 8px;
+    gap: 10px;
+}
+.addressItem{
+    display: flex;
+    background-color: var(--dark-900);
+    align-items: center;
+    border: 1px solid #ff3f4b;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--white);
+    transition: 0.5s;
+}
+.buttonAddress{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.addressItem:hover{
+    background-color: #ff3f4b;
+}
+.containerCustomerDetails{
+    display: flex;
+    align-items: first baseline;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid #ff3f4b;
+    padding: 14px;
+}
+.tag{
+    width: 9px;
+    height: 60px;
+    background-color: var(--green-900);
+    border-radius: 6px 0 0 6px;
+    margin-right: 16px;
+}
+.inputrow{
+    width: 70%;
+    height: 40px;
+    border: 0;
+    background-color: var(--dark-900);
+    border-radius: 8px;
+    padding: 0 16px;
+    color: var(--white);
+    border: 1px solid var(--gray-100);
+}
+.label{
+    color: var(--white);
+    font-size: 1.5em;
+}
+.input{
+    height: 40px;
+    border: 0;
+    background-color: var(--dark-900);
+    border-radius: 8px;
+    padding: 0 16px;
+    color: var(--white);
+    border: 1px solid var(--gray-100);
+}
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 40px;
+    width: 220px;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--green-900);
+    font-weight: bold;
+    font-size: 19px;
+    color: var(--white);
+    transition: all 0.5s;
+}
+.button:hover{
+    transform: scale(1.05);
+    color: var(--dark-500);
+}
+/* Estilo alternativo para mensagens de erro */
+.flashMessage.error {
+    background-color: var(--red-500);
+    border-color: var(--red-700);
+}
+
+/* Animação para desaparecer */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .table-container {
+        flex-direction: column; /* Pilha as tabelas verticalmente */
+    }
+}

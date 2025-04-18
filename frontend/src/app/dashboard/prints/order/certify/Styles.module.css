@@ -1,0 +1,153 @@
+.container {
+    width: 297mm; /* Largura exata da folha A4 */
+    height: 210mm; /* Altura exata da folha A4 */
+    margin: 0 auto;
+    padding: 10mm; /* Margem interna para evitar cortes */
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+}
+
+/* Estilos para o botão de impressão */
+.printButton {
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #0070f3;
+    margin-left: 3px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.printButton:hover {
+    background-color: #005bb5;
+}
+
+.marginContainer {
+   padding: 10px;
+}
+
+.containerCustomerButtons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Defina um tamanho fixo ou ajustável */
+    height: 120px;
+    overflow: hidden;
+}
+
+.logo img {
+    height: 120px;
+    width: 120px;
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonContainer table {
+    border: 1px solid red;
+}
+
+.containerHeaderDetails {
+    text-align: center;
+    margin-right: 100px;
+    margin-bottom: 30px;
+}
+
+.containerBodyDetails{
+    text-align: left;
+    margin-left: 120px;
+    justify-content: left;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    padding: 8px;
+}
+
+.containerCustomerButtons h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.containerCustomerButtons h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.containerCustomerDetails {
+    margin-bottom: 20px;
+}
+
+.containerCustomerDetails label {
+    display: block;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.containerProductDetails{
+    padding: 10px;
+}
+
+.containerProductDetails table{
+    justify-content: center;
+    width: 90%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.containerProductDetails table th,
+.containerProductDetails table td{
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.footerContainer{
+    margin-top: 90px;
+    text-align: center;
+    align-items: center;
+}
+
+.row {
+    font-size: 12px;
+    padding: 2px;
+}
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 10mm;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 10mm;
+    }
+
+    .printButton {
+        display: none;
+    }
+
+    .containerProductDetails table {
+        page-break-inside: avoid;
+    }
+
+    .footerContainer {
+        page-break-before: always;
+    }
+}
