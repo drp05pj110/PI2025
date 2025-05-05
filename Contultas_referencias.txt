@@ -1,0 +1,87 @@
+const { Op } = Sequelize;              // biblioteca de operadores
+const query = `%${req.query.search}`;  // string de consulta
+
+User.findAll({ where: { US_USERNAME: { [Op.like]: query } } })
+  .then(users => {
+    res.render('main/users', {
+      title: "Usuarios",
+      usuario: users,
+    });
+  });
+
+
+
+view
+
+<div class="home-header">
+    {{#if search}}
+        <h1>Você está buscando por: <span>{{search}}</span></h1>
+            {{#if customerQty}}
+                <p>Foram encontrados <span>{{customerQty}}</span> Clientes</p>
+            {{else}}
+                <p>Nenhum Cliente Cadastrado!<span> {{search}}</span></p>
+            {{/if}}
+    {{else}}
+            {{#if customers}}
+                 <h1>Clientes <span>{{customerQty}} Cadastrados!</span></h1>
+            {{else}}
+                <span>Nenhum Cliente Cadastrado!</span>
+            {{/if}}
+    {{/if}}
+    
+    <form action="/showCustomer" method="get">
+        <input type="text" name="search" placeholder="Digite parte do nome do Cliente(Razão Social).">
+        <input type="submit" class="btn" value="Buscar">
+    </form>
+    <div class="order-container">
+        <span>Ordenar por:</span>
+        <form action="/showCustomer" method="get">
+            <input type="hidden" name="search" value="{{this.search}}">
+            <input type="hidden" name="order" value="new">
+            <button type="submit"><i class="bi bi-arrow-up"></i></button>
+        </form>
+        <form action="/showCustomer" method="get">
+            <input type="hidden" name="search" value="{{this.search}}">
+            <input type="hidden" name="order" value="old">
+            <button type="submit"><i class="bi bi-arrow-down"></i></button>
+        </form>
+        <a href="/showCustomer">Limpar</a>
+    </div>
+</div>
+<div class="queries">
+{{#each customers}}
+            <li>
+                <span class="label">{{this.ra_social}}</span>
+                <span class="actions">
+                    <a href="/seeCustomer/{{this.id}}" class="btn">Visualizar</a>
+                    <a href="/editCustomer/{{this.id}}" class="btn">Editar</a>
+                    <form action="/removeCustomer" method="post">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <input type="submit" value="Excluir" class="btn">
+                    </form>   
+                </span>
+            </li>
+        {{/each}}
+</div>  
+  
+  controller
+   const { Op } =require('sequelize')
+        let search = ''
+
+        if(req.query.search){
+            search = req.query.search
+        }
+
+        let order = 'DESC'
+
+        if(req.query.order === 'old'){
+            order = 'ASC'
+        }else{
+            order = 'DESC'
+        }  
+      const customerData = await Customer.findAll({
+            where: {
+                ra_social: { [Op.like]: `%${search}%` },
+            },
+            order: [['createdAt', order]]
+        })

@@ -1,0 +1,12 @@
+para cria a migration
+o comando de a ser usado é:
+
+npx sequelize migration:create --name=<nome da tabela no plural>
+
+mexer no arquivo migrations criado e colocar os atributos
+conforme os modelos
+
+depois de tudo isso executar o comando:
+
+npx sequelize db:migrate
+
