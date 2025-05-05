@@ -28,7 +28,7 @@ export function Header() {
             <div className={Styles.headerContent}>
                 <Link href='/dashboard'>
                     <Image
-                        alt='Sakai Controll'
+                        alt='DRP05'
                         src={logoImg}
                         width={60}
                         height={60}
@@ -58,9 +58,6 @@ export function Header() {
                     </Link>
                     <Link href='/dashboard/scheduling' onClick={handleMenuLinkClick}>
                         Agendamentos
-                    </Link>
-                    <Link href='/dashboard/prints' onClick={handleMenuLinkClick}>
-                        Imprimir
                     </Link>
                     <form action={handleLogout}>
                         <button type='submit'>

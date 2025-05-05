@@ -29,7 +29,7 @@ export default function Category() {
 
   return (
     <main className={Styles.container}>
-      <h1>Consulta de categoria de produtos</h1>
+      <h1>Consultar Tipo de Serviço</h1>
 
       {/* Formulário de busca */}
       <form className={Styles.form} onSubmit={handleSubmit}>
@@ -43,7 +43,7 @@ export default function Category() {
             className={Styles.inputrow}
           />
           <button type="submit" className={Styles.button}>
-            Filtrar Categoria
+            Filtrar Serviço
           </button>
         </div>
       </form>

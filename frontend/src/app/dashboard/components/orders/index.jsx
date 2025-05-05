@@ -20,12 +20,6 @@ export function Orders(){
                     <div className={Styles.tag}></div>
                     <span>Os: Pendentes</span>   
                 </Link>
-                <Link className={Styles.orderItem} href={
-                    '/dashboard/queries/order/closeorders'
-                }>
-                    <div className={Styles.tag}></div>
-                    <span>Os: Concluidas</span>   
-                </Link>
             </section>
 
         </main>

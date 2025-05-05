@@ -16,19 +16,15 @@ export default function Registrations(){
             </Link>
             <Link href='/dashboard/registrations/category' className={Styles.registrationItem}>
                 <div className={Styles.tag}></div>
-                <span>Categoria de Produtos</span>   
+                <span>Tipo de Serviço</span>   
             </Link>
             <Link href='/dashboard/registrations/product' className={Styles.registrationItem}>
                 <div className={Styles.tag}></div>
-                <span>Produto</span>   
+                <span>Produtos para o serviço</span>   
             </Link>
             <Link href='/dashboard/registrations/employee' className={Styles.registrationItem}>
                 <div className={Styles.tag}></div>
                 <span>Funcionário</span>   
-            </Link>
-            <Link href='/dashboard/registrations/user' className={Styles.registrationItem}>
-                <div className={Styles.tag}></div>
-                <span>Usuário</span>   
             </Link>
         </section>
 

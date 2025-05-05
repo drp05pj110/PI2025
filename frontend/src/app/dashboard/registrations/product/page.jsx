@@ -53,7 +53,7 @@ export default function Product() {
 
     return (
         <main className={Styles.container}>
-            <h1>Cadastro de Produto</h1>
+            <h1>Cadastro de Produto para serviços</h1>
 
             {/* Exibição de mensagens */}
             {message && <div className={Styles.flashMessage}>{message}</div>}
@@ -72,7 +72,7 @@ export default function Product() {
                 <input
                     type="text"
                     name="name"
-                    placeholder="Digite o nome do produto"
+                    placeholder="Digite o nome do produto que será usado."
                     required
                     className={Styles.input}
                 />
@@ -86,14 +86,14 @@ export default function Product() {
                 <input
                     type="text"
                     name="registry"
-                    placeholder="Digite o Registro do produto"
+                    placeholder="Digite permanente ou troca"
                     required
                     className={Styles.input}
                 />
                 <input
                     type="text"
                     name="unity_of_mensure"
-                    placeholder="Digite quantidade ou concentração do produto (ex.: 10/100, 50 g ...)"
+                    placeholder="Digite quantidade"
                     required
                     className={Styles.input}
                 />

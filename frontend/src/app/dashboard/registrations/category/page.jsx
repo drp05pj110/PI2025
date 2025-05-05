@@ -46,7 +46,7 @@ export default function Category() {
                 <input
                     type="text"
                     name="name"
-                    placeholder="Digite a categoria(ex.: Desinsetização desratização ...)"
+                    placeholder="Digite a categoria(ex.: Manutenção, Limpeza, Instalação ...)"
                     required
                     className={Styles.rowinput}
                 />

@@ -183,7 +183,7 @@ export default function OrdersDetails() {
       <div className={Styles.headerContainer}>
         <div className={Styles.logo}> {/* Uso correto do componente Image */}
           <Image
-            alt="Sakai Controll"
+            alt="DRP05-PJI110"
             src={logoImg} // Usando a imagem importada
             width={80}
             height={80}
@@ -192,7 +192,7 @@ export default function OrdersDetails() {
           /></div>
 
         <div className={Styles.containerHeaderDetails}>
-          <h1>CERTIFICADO DE EXECUÇÃO DE SERVIÇO DE CONTROLE DE PRAGAS</h1>
+          <h1>RELATÓRIO DE SERVIÇO PARA O CLIENTE</h1>
         </div>
       </div>
      
@@ -202,7 +202,12 @@ export default function OrdersDetails() {
             <p><strong>ENDEREÇO:</strong> {address.street}, {address.number} - {address.beighborhood}, {address.city} - {address.state}</p>
             <p><strong>CNPJ:</strong> {customer.identification}</p>
             <p><strong>OS:</strong> {orderId} - Data: {formatDateForDisplay(order.execution_date)}</p>
-            <p><strong>SERVIÇO EXECUTADO:</strong> {order.description}</p>
+            <p><strong>SERVIÇO EXECUTADO:</strong> 
+            {categories.map((categories) => (
+              <tr key={categories.id}>
+                  <td>{categoryDetails[categories.category_id]?.name || "Não encontrado"}</td>
+              </tr>
+            ))}</p>
             <p><strong>Garantia:</strong> {order.validity} meses</p>
           </div>
         )}
@@ -214,8 +219,8 @@ export default function OrdersDetails() {
           
             <tr>
               <th>Nome do Produto</th>
-              <th>Inscrição MS/MA</th>
-              <th>Diluição Recomendada</th>
+              <th>Troca/Permanente/Reparo</th>
+              <th>Quantidade</th>
               <th>Descrição</th>
             </tr>
       
@@ -234,9 +239,15 @@ export default function OrdersDetails() {
    
         
         <div className={Styles.footerContainer}>
-          <p><strong>Técnico responsável</strong></p>
-          <p>Luciano Barbosa Sakai</p>
-          <p>CRQ: 04166550</p>
+          <p><strong>Técnico responsável pelo Serviço</strong></p>
+          <p><center>
+              {employees.map((employee) => (
+                <tr key={employee.id}>
+                    <td>{employeeDetails[employee.employee_id]?.name || "Não encontrado"}</td>
+                </tr>
+            ))}
+            </center>
+          </p>
         </div>
       </div>
 

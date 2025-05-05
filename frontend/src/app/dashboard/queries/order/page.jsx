@@ -18,14 +18,6 @@ export default function QuerieOrder(){
                 <div className={Styles.tag}></div>
                 <span>Ativas</span>   
             </Link>
-            <Link href='/dashboard/queries/order/closeorders' className={Styles.registrationItem}>
-                <div className={Styles.tag}></div>
-                <span>Concluidas</span>   
-            </Link>
-            <Link href='/dashboard/queries/product' className={Styles.registrationItem}>
-                <div className={Styles.tag}></div>
-                <span>Por data</span>   
-            </Link>
         </section>
 
     </main>

@@ -182,8 +182,8 @@ const handleGeneratePDF = async () => {
           /></div>
 
         <div className={Styles.containerHeaderDetails}>
-          <h1>Sakai Controle de Pragas</h1>
-          <h2>Whatsapp: (15) 99788-6338</h2>
+          <h1>Alunos da Univesp</h1>
+          <h2> Grupo DRP05-PJI110</h2>
         </div>
       </div>
      
@@ -247,7 +247,7 @@ const handleGeneratePDF = async () => {
             <tr>
               <th>Alvo</th>
               <th>Produto(s)</th>
-              <th>Registro</th>
+              <th>Reparo/Troca/Permanente</th>
               <th>Quantidade</th>
             </tr>
           </thead>
@@ -274,13 +274,9 @@ const handleGeneratePDF = async () => {
         <table>
           <tbody>
             <tr> 
-                    <td>Periodo de afastamentos: 2 horas</td>
+                    <td>Orientações para o Serviço:</td>
             </tr>
-            <tr> 
-                  
-                    <td>Ação Toxicológica: Disque Intoxicação Nacional: 0800 722 6001</td>
-                  
-            </tr>
+      
             <tr>  
                     <td><label className={Styles.row}>Observações: {order.observations}</label></td>
             </tr>
@@ -291,19 +287,14 @@ const handleGeneratePDF = async () => {
           <thead>
            
             <tr>
-              <td>Luciano Barbosa Sakai</td>
               <td>
                 Recebi o Comprovante de execução do serviço e orientações pertinentes ao serviço executado.
               </td> 
             </tr>
             <tr>
-              <td>Técnico Responsável</td>
               <td>Nome:</td> 
             </tr>
-            <tr>
-              <td>CRQ: 04165650</td>
-              <td>RG:</td> 
-            </tr>
+          
           </thead>
         </table>
       </div>

@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Sakai Controll",
-  description: "Sistema de comtrole tecnologico e inteligente",
+  title: "DRP05-PJI110-SALA-001GRUPO-004",
+  description: "Sistema tecnologico e inteligente",
 };
 
 export default function RootLayout({ children }) {

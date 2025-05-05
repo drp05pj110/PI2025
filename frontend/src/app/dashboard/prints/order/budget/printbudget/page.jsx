@@ -159,8 +159,8 @@ const handleGeneratePDF = async () => {
           /></div>
 
         <div className={Styles.containerHeaderDetails}>
-          <h1>Sakai Controle de Pragas</h1>
-          <h3>Telefone: (11) 44612658 Whatsapp: (15) 99788-6338</h3>
+        <h1>Alunos da Univesp</h1>
+        <h2> Grupo DRP05-PJI110</h2>
         </div>
       </div>
      
@@ -206,9 +206,9 @@ const handleGeneratePDF = async () => {
         <table>
           
             <tr>
-              <th>Nome do Produto</th>
-              <th>Inscrição MS/MA</th>
-              <th>Diluição Recomendada</th>
+              <th>Produto</th>
+              <th>Permanente/Troca/Reparo</th>
+              <th>Quantidade</th>
               <th>Alvo</th>
             </tr>
       
@@ -228,7 +228,7 @@ const handleGeneratePDF = async () => {
         
         <div className={Styles.footerContainer}>
           <p><strong>Atenciosamente,</strong></p>
-          <p>Sakai Controle de Pragas</p>
+          <p>Equipe de Finanças</p>
         </div>
       </div>
 

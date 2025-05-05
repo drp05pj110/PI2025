@@ -20,19 +20,15 @@ export default function Queries(){
             </Link>
             <Link href='/dashboard/queries/category' className={Styles.registrationItem}>
                 <div className={Styles.tag}></div>
-                <span>Categoria de Produtos</span>   
+                <span>Tipo de Serviço</span>   
             </Link>
             <Link href='/dashboard/queries/product' className={Styles.registrationItem}>
                 <div className={Styles.tag}></div>
-                <span>Produto</span>   
+                <span>Produto para o serviço</span>   
             </Link>
             <Link href='/dashboard/queries/employee' className={Styles.registrationItem}>
                 <div className={Styles.tag}></div>
                 <span>Funcionário</span>   
-            </Link>
-            <Link href='/dashboard/queries/user' className={Styles.registrationItem}>
-                <div className={Styles.tag}></div>
-                <span>Usuário</span>   
             </Link>
         </section>
 
